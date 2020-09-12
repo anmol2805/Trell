@@ -1,10 +1,11 @@
-# trell
-
-Improvements can be done
+# Trell
     
-* Use MVVM + Clean architecture for better abstraction of data layer
-* Divide code in different modules rather keeping in same app module
-* Make sub-modules inside each module for data and ui layer
-* Use dagger2 for dependency injection and avoid passing data directly from UI to Data layer
-* Use viewState to make changes in UI which is toggled from viewModel
-* Remove exoplayer and develop inhouse video player for reduced apk size and exception free app
+* Developed over MVVM + Clean architecture for better abstraction of data layer
+* Followed modular structure
+    Base module for all interfaces, classes, utilities, etc which are common to multiple features of the app
+    Home module for video snapping feature
+    App module for app entry point and initializing Dagger graph
+* Each module has three layers of code i.e. data, domain and ui layer
+* Used dagger2 for dependency injection of fragments, viewModels, and repositories
+* Used viewState with databinding to update changes in UI which is updated from viewModel
+* Used Kotlin Coroutines for accessing data on light weight threads from data layer
