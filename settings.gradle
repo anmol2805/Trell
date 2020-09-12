@@ -1,0 +1,8 @@
+include ':app'
+include ':base:domain'
+include ':base:ui'
+include ':base:data'
+include ':home:domain'
+include ':home:ui'
+include ':home:data'
+rootProject.name = "Trell"
